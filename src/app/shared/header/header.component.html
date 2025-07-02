@@ -50,6 +50,28 @@
             </li>
 
             <li class="nav-item dropdown">
+                <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    Guards
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" routerLink="/corporate">Corporate Insurance</a></li>
+
+                    <!-- Start SME Submenu -->
+                    <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" routerLink="/sme">
+                            SME Insurance
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" routerLink="/sme/marine">Marine Insurance</a></li>
+                            <li><a class="dropdown-item" routerLink="/sme/fire">Fire Insurance</a></li>
+                        </ul>
+                    </li>
+                    <!-- End SME Submenu -->
+
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
                 <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">Travel Insurance</a>
                 <ul class="dropdown-menu">
@@ -58,6 +80,8 @@
                     <li> <a class="dropdown-item" routerLink="travelInc/student-trip">Student Trip</a></li>
                 </ul>
             </li>
+
+
         </ul>
     </div>
 </nav>
