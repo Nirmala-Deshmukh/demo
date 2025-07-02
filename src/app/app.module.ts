@@ -6,13 +6,21 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { SmeComponent } from './guards/sme/sme.component';
+import { CorporateComponent } from './guards/corporate/corporate.component';
+import { MarineComponent } from './guards/marine/marine.component';
+import { FireComponent } from './guards/fire/fire.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    SmeComponent,
+    CorporateComponent,
+    MarineComponent,
+    FireComponent
   ],
   imports: [
     BrowserModule,
