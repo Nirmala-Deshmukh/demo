@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CorporateComponent } from './guards/corporate/corporate.component';
 import { SmeComponent } from './guards/sme/sme.component';
-import { authCanLoadGuard, authChildGuard, authGuard } from './shared/auth-guard.guard';
+import { authCanLoadGuard, authCanMatchGuard, authChildGuard, authDeactiveGuard, authGuard, authResolveGuard } from './shared/auth-guard.guard';
 import { FireComponent } from './guards/fire/fire.component';
 import { MarineComponent } from './guards/marine/marine.component';
 
@@ -16,8 +16,8 @@ const routes: Routes = [
   { path: 'sme', canActivateChild:[authChildGuard],
     children:[
       {path:'', component: SmeComponent},
-      {path:'fire', component: FireComponent},
-      {path:'marine', component: MarineComponent}
+      {path:'fire', component: FireComponent, canDeactivate: [authDeactiveGuard]},
+      {path:'marine', component: MarineComponent,  resolve:[authResolveGuard]}
     ]
   },
 
@@ -29,7 +29,7 @@ const routes: Routes = [
   //implementation of health module
   {
     path: 'healthInc', loadChildren: () => import("./health/health.module")
-      .then(mod => mod.HealthModule)
+      .then(mod => mod.HealthModule), canMatch: [authCanMatchGuard]
   },
   //implementation of motor module
   {

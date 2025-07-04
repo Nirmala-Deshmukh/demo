@@ -10,6 +10,7 @@ import { SmeComponent } from './guards/sme/sme.component';
 import { CorporateComponent } from './guards/corporate/corporate.component';
 import { MarineComponent } from './guards/marine/marine.component';
 import { FireComponent } from './guards/fire/fire.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FireComponent } from './guards/fire/fire.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
