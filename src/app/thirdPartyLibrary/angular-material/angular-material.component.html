@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  My Angular Material Toolbar
+</mat-toolbar>
+
+<div style="margin: 20px;">
+  <mat-form-field appearance="outline">
+    <mat-label>Enter your name</mat-label>
+    <input matInput [(ngModel)]="name" placeholder="Your name" />
+  </mat-form-field>
+
+  <button mat-raised-button color="accent" (click)="sayHello()">
+    Greet Me
+  </button>
+
+  <p *ngIf="greeting">{{ greeting }}</p>
+</div>  

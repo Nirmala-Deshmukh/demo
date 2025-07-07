@@ -1,0 +1,35 @@
+<div class="cookie-wrapper">
+  <h2>🍪 Cookie Example</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="name"
+    placeholder="Enter your name"
+    pInputText
+    class="cookie-input"
+  />
+
+  <div class="button-group">
+    <p-button
+      label="Set Cookie"
+      styleClass="p-button-primary"
+      (click)="setCookie()"
+    ></p-button>
+
+    <p-button
+      label="Get Cookie"
+      styleClass="p-button-info"
+      (click)="getCookie()"
+    ></p-button>
+
+    <p-button
+      label="Delete Cookie"
+      styleClass="p-button-danger"
+      (click)="deleteCookie()"
+    ></p-button>
+  </div>
+
+  <p *ngIf="cookieValue" class="cookie-value">
+    🍪 Cookie Value: <strong>{{ cookieValue }}</strong>
+  </p>
+</div>
