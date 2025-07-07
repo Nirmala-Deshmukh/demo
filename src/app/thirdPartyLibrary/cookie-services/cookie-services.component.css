@@ -1,0 +1,27 @@
+.cookie-wrapper {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 24px;
+  border-radius: 12px;
+  background: #f4f4f4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.cookie-input {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 8px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.cookie-value {
+  font-size: 1.1rem;
+  color: #333;
+}

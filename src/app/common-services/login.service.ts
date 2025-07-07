@@ -4,7 +4,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class LoginService {
-  private loggedIn:boolean = false;
+  private loggedIn:boolean = true;
+  public user = {
+    name:'alex',
+    age:20,
+    role:'admin'
+  }
   isLoggedIn()
   {
     return this.loggedIn;
@@ -16,5 +21,10 @@ export class LoginService {
   logout()
   {
     this.loggedIn = false;
+  }
+
+  userHasRole(role:string):boolean
+  {
+   return role === this.user.role;
   }
 }
